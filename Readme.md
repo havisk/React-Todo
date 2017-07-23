@@ -1,6 +1,6 @@
 ## Welcome to My Project
 
-> Timer App built using React.
+> Todo App built using React.
 
 
 ## Usage
