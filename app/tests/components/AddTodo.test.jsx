@@ -23,14 +23,14 @@ describe('AddTodo', () => {
         expect(spy).toHaveBeenCalledWith(text);
     });
 });
-it('should not call onAddTodo with invalid data', () => {
-    let text = '';
-    let spy = expect.createSpy();
-    let addTodo = TestUtils.renderIntoDocument(<AddTodo onAddTodo={spy}/>);
-    let $el = $(ReactDOM.findDOMNode(addTodo));
+    it('should not call onAddTodo with invalid data', () => {
+        let text = '';
+        let spy = expect.createSpy();
+        let addTodo = TestUtils.renderIntoDocument(<AddTodo onAddTodo={spy}/>);
+        let $el = $(ReactDOM.findDOMNode(addTodo));
 
-    addTodo.refs.text.value = text;
-    TestUtils.Simulate.submit($el.find('form')[0]);
+        addTodo.refs.text.value = text;
+        TestUtils.Simulate.submit($el.find('form')[0]);
 
-    expect(spy).toNotHaveBeenCalled();
+        expect(spy).toNotHaveBeenCalled();
 });
