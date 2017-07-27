@@ -7,6 +7,7 @@ let Todo = React.createClass({
 
     render: function () {
         let {text, id, completed, createdAt, completedAt } = this.props;
+        let todoClassName = completed ? 'todo todo-completed' : 'todo'
         let renderDate = () => {
             let message = 'Created ';
             let timestamp = createdAt;
@@ -21,12 +22,15 @@ let Todo = React.createClass({
 
 
         return (
-            <div onClick={() =>{
+            <div className={todoClassName} onClick={() =>{
                 this.props.onToggle(id)
             }}>
-                <input type="checkbox" checked={completed}/>
-                <p>{text}</p>
-                <p>{renderDate()}</p>
+                <div>
+                    <input type="checkbox" checked={completed}/>
+                </div>
+                <div>
+                    <p>{text}</p>
+                </div>
             </div>
         )
     }
