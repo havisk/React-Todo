@@ -29,10 +29,11 @@ module.exports = {
         './app/api'
       ],
       alias: {
-          applicationStyles: 'app/css/app.scss'
+          applicationStyles: 'app/css/app.scss',
+          actions: 'app/actions/actions.jsx'
 
       },
-      extensions: ['', '.js', '.jsx']
+      extensions: ['', '.js', '.jsx', 'scss']
   },
   module: {
       loaders: [
