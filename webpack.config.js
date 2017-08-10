@@ -29,7 +29,11 @@ module.exports = {
       filename: './public/bundle.js'
   },
   resolve: {
-      root: __dirname,
+      root: [
+          __dirname,
+          path.resolve(__dirname, 'app/component'),
+          path.resolve(__dirname, 'app/api'),
+          ],
       modulesDirectories: [
         'node_modules',
         './app/components',
