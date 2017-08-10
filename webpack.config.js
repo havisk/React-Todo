@@ -8,7 +8,7 @@ module.exports = {
   entry: [
       'script!jquery/dist/jquery.min.js',
       'script!foundation-sites/dist/js/foundation.min.js',
-      '/app/app.jsx'
+      './app/app.jsx'
   ],
    externals: {
         jquery: 'jQuery'
@@ -37,13 +37,13 @@ module.exports = {
       ],
       alias: {
           app: 'app',
-          applicationStyles: 'app/styles/app.scss',
+          applicationStyles: 'app/css/app.scss',
           actions: 'app/actions/actions.jsx',
           reducers: 'app/reducers/reducers.jsx',
           configureStore: 'app/store/configureStore.jsx'
 
       },
-      extensions: ['', '.js', '.jsx', 'scss']
+      extensions: ['', '.js', '.jsx', '.scss']
   },
   module: {
       loaders: [
