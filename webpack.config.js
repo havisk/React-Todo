@@ -1,9 +1,6 @@
 let webpack = require('webpack');
 let path = require('path');
 
-let BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-
-
 
 process.env.NODE_ENV = process.env.NODE_ENV ||'development';
 
@@ -21,14 +18,6 @@ module.exports = {
          '$': 'jquery',
           'jQuery': 'jquery'
       }),
-       new BundleAnalyzerPlugin({
-           analyzerMode: 'server',
-           analyzerHost: 'localhost',
-           analyzerPort: 3000,
-           reportFilename: 'report.html',
-           openAnalyzer: true,
-           logLevel: 'info'
-       })
        // new webpack.optimize.UglifyJsPlugin({
        //     compressor: {
        //         warnings: false
