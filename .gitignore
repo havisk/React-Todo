@@ -3,6 +3,7 @@
 node_modules
 playground
 public/bundle.js
+config/
 
 # Compiled source #
 ###################
