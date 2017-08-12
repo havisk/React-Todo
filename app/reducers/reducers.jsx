@@ -42,6 +42,20 @@ export let todosReducer = (state = [], action) => {
                 ...state,
                 ...action.todos
             ];
+
+        default:
+            return state;
+    }
+};
+
+export let authReducer = (state ={}, action) => {
+    switch(action.type) {
+        case 'LOGIN':
+            return {
+                uid: action.uid
+                }
+        case 'LOGOUT':
+            return {};
         default:
             return state;
     }
