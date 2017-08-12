@@ -111,7 +111,7 @@ export let startLogin = () => {
 
 export let logout = () => {
     return {
-        type: "LOGOUT"
+        type: "LOGOUT",
     }
 };
 
